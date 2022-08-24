@@ -1,9 +1,10 @@
 import CurrentWeather from './components/CurrentWeather/CurrentWeather';
+import DailyForecastList from './components/DailyForecastList/DailyForecastList';
 
 function App() {
   return (
     <div>
-      <CurrentWeather />
+      <DailyForecastList />
     </div>
   );
 }

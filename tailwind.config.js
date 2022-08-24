@@ -20,6 +20,9 @@ module.exports = {
       backgroundPosition: {
         test: '0% 20%',
       },
+      gridTemplateColumns: {
+        dailyForecast: 'repeat(auto-fit, 128px)',
+      },
     },
   },
   plugins: [],

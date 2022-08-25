@@ -6,8 +6,8 @@ function App() {
   return (
     <div className='text-white'>
       <CurrentWeather />
-      {/* <DailyForecastList /> */}
-      {/* <TodaysWeatherDetails />t */}
+      <DailyForecastList />
+      <TodaysWeatherDetails />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import DailyForecast from '../DailyForecast/DailyForecast';
+import DailyForecast from '../../organisms/DailyForecast/DailyForecast';
 
 const DailyForecastList = () => {
   return (

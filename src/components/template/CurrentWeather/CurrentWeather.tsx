@@ -1,6 +1,6 @@
-import SearchPlacesButton from '../atoms/SearchPlacesButton/SearchPlacesButton';
-import LocationButton from '../atoms/LocationButton/LocationButton';
-import CurrentWeatherImage from '../atoms/CurrentWeatherImage/CurrentWeatherImage';
+import SearchPlacesButton from '../../atoms/SearchPlacesButton/SearchPlacesButton';
+import LocationButton from '../../atoms/LocationButton/LocationButton';
+import CurrentWeatherImage from '../../atoms/CurrentWeatherImage/CurrentWeatherImage';
 
 const CurrentWeather = () => {
   return (

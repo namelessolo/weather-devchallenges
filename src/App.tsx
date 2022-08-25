@@ -1,10 +1,11 @@
-import CurrentWeather from './components/CurrentWeather/CurrentWeather';
-import DailyForecastList from './components/DailyForecastList/DailyForecastList';
+import CurrentWeather from './components/template/CurrentWeather/CurrentWeather';
+import DailyForecastList from './components/template/DailyForecastList/DailyForecastList';
+import TodaysWeatherDetails from './components/organisms/TodaysWeatherDetails/TodaysWeatherDetails';
 
 function App() {
   return (
-    <div>
-      <DailyForecastList />
+    <div className='text-white'>
+      <TodaysWeatherDetails />
     </div>
   );
 }

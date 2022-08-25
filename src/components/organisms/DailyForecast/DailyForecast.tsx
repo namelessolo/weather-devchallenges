@@ -1,4 +1,4 @@
-import weatherIcon from '../../assets/LightCloud.png';
+import weatherIcon from '../../../assets/LightCloud.png';
 
 const DailyForecast = () => {
   return (

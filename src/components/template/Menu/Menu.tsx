@@ -5,7 +5,7 @@ import CityButton from '../../atoms/CityButton/CityButton';
 
 const Menu = () => {
   return (
-    <div className='bg-front h-screen p-3'>
+    <div className='bg-front h-full p-3'>
       <button className='block ml-auto text-4xl mb-8'>
         <IoCloseSharp />
       </button>

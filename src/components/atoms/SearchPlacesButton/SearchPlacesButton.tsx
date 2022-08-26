@@ -1,5 +1,14 @@
+import { useAppDispatch } from '../../../store/hooks';
+import { showMenu } from '../../../store/weatherSlice';
+
 const SearchPlacesButton = () => {
-  return <button className='bg-deepGray px-5 py-3'>Search for places</button>;
+  const dispatch = useAppDispatch();
+
+  return (
+    <button className='bg-deepGray px-5 py-3' onClick={() => dispatch(showMenu())}>
+      Search for places
+    </button>
+  );
 };
 
 export default SearchPlacesButton;

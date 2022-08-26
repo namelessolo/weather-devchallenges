@@ -4,7 +4,7 @@ import CurrentWeatherImage from '../../atoms/CurrentWeatherImage/CurrentWeatherI
 const CurrentWeatherData = () => {
   return (
     <>
-      <CurrentWeatherImage />;
+      <CurrentWeatherImage />
       <div className='flex flex-col items-center'>
         <p className='text-9xl mb-6'>15°C</p>
         <p className='text-4xl text-gray mb-12'>Shower</p>

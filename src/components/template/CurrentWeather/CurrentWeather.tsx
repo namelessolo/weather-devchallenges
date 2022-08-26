@@ -1,12 +1,11 @@
-import { useState } from 'react';
-
 import SearchPlacesButton from '../../atoms/SearchPlacesButton/SearchPlacesButton';
 import LocationButton from '../../atoms/LocationButton/LocationButton';
 import CurrentWeatherData from '../../organisms/CurrentWeatherData/CurrentWeatherData';
 import Menu from '../Menu/Menu';
+import { useAppSelector } from '../../../store/hooks';
 
 const CurrentWeather = () => {
-  const [menu, setMenu] = useState(false);
+  const menu = useAppSelector((state) => state.weather.menu);
 
   return (
     <div className='bg-front h-screen text-white px-3 pt-5 min-h-[820px]'>

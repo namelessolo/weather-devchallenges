@@ -1,4 +1,4 @@
-import TodaysWeatherContainer from '../../template/TodaysWeatherContainer/TodaysWeatherContainer';
+import TodaysWeatherContainer from '../TodaysWeatherContainer/TodaysWeatherContainer';
 
 type Props = {
   visibility: number;

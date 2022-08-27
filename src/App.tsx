@@ -1,13 +1,11 @@
-import CurrentWeather from './components/template/CurrentWeather/CurrentWeather';
+import AppWrapper from './components/template/AppWrapper/AppWrapper';
 import { store } from './store/app';
 import { Provider } from 'react-redux';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className='text-white'>
-        <CurrentWeather />
-      </div>
+      <AppWrapper />
     </Provider>
   );
 }

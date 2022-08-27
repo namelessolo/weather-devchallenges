@@ -17,11 +17,17 @@ module.exports = {
       backgroundImage: {
         cloud: "url('/src/assets/Cloud-background.png')",
       },
-      backgroundPosition: {
-        test: '0% 20%',
-      },
       gridTemplateColumns: {
         dailyForecast: 'repeat(auto-fit, 128px)',
+        appMedium: '400px 1fr',
+        appDesktop: '500px minmax(0, 1fr)',
+        todaysWeatherDetails: 'repeat(2, minmax(0, 380px))',
+      },
+      gridTemplateRows: {
+        appDesktop: 'auto 1fr',
+      },
+      screens: {
+        desktop: '1320px',
       },
     },
   },

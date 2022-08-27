@@ -1,4 +1,4 @@
-import TodaysWeatherContainer from '../../template/TodaysWeatherContainer/TodaysWeatherContainer';
+import TodaysWeatherContainer from '../TodaysWeatherContainer/TodaysWeatherContainer';
 import { TiLocationArrow } from 'react-icons/ti';
 
 type Props = {

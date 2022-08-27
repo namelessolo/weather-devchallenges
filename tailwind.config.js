@@ -27,7 +27,7 @@ module.exports = {
         appDesktop: 'auto 1fr',
       },
       screens: {
-        desktop: '1320px',
+        desktop: '1350px',
       },
     },
   },

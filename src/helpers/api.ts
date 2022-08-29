@@ -13,8 +13,8 @@ export const fetchWeatherByCityOrLocation = async (city?: string) => {
     currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&q=${city}`;
   } else {
     const [lat, lon] = await getLocation();
-    forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&lat=${lat}&lon=${lon}`;
-    currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&lat=${lat}&lon=${lon}`;
+    forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;
+    currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;
   }
   const currentWeather = (await (await axios.get(currentWeatherURL)).data) as CurrentWeather;
   const forecastWeather = (await (await axios.get(forecastWeatherURL)).data) as DailyForecast;

@@ -10,11 +10,11 @@ const CurrentWeatherData = () => {
         <>
           <CurrentWeatherImage />
           <div className='flex flex-col items-center'>
-            <p className='text-9xl mb-6'>15°C</p>
-            <p className='text-4xl text-gray mb-12'>Shower</p>
+            <p className='text-9xl mb-6'>{Math.round(currentWeather.main.temp)}</p>
+            <p className='text-4xl text-gray mb-12 capitalize'>{currentWeather.weather[0].description}</p>
             <p className='text-lg text-gray mb-8'>Today · Fri, 5 Jun</p>
             <p className='text-lg text-gray flex items-center gap-3'>
-              <ImLocation /> Helsinki
+              <ImLocation /> {currentWeather.name}
             </p>
           </div>
         </>

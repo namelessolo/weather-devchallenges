@@ -9,8 +9,8 @@ export const fetchWeatherByCityOrLocation = async (city?: string) => {
   let forecastWeatherURL: string;
   let currentWeatherURL: string;
   if (city) {
-    forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&q=${city}`;
-    currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&q=${city}`;
+    forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&q=${city}&units=metric`;
+    currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&q=${city}&units=metric`;
   } else {
     const [lat, lon] = await getLocation();
     forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;

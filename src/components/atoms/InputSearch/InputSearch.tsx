@@ -1,10 +1,11 @@
 import { HiSearch } from 'react-icons/hi';
 
-import useForm from '../../../hooks/useForm';
+type Props = {
+  input: string;
+  handleInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
 
-const InputSearch = () => {
-  const { input, handleInput } = useForm();
-
+const InputSearch: React.FC<Props> = ({ input, handleInput }) => {
   return (
     <div className='w-full h-12 relative'>
       <input

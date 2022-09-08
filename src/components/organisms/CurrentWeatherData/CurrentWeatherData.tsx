@@ -8,7 +8,7 @@ const CurrentWeatherData = () => {
     <>
       {currentWeather ? (
         <>
-          <CurrentWeatherImage />
+          <CurrentWeatherImage weather_icon={currentWeather.weather[0].icon} />
           <div className='flex flex-col items-center'>
             <p className='text-9xl mb-6'>{Math.round(currentWeather.main.temp)}</p>
             <p className='text-4xl text-gray mb-12 capitalize'>{currentWeather.weather[0].description}</p>

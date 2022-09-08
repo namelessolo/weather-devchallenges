@@ -15,7 +15,10 @@ const Humidity: React.FC<Props> = ({ humidity }) => {
           <span>100</span>
         </div>
         <div className='relative bg-white h-2 rounded-lg overflow-hidden my-1'>
-          <div className='absolute h-full w-[84%] bg-yellow'></div>
+          <div
+            className='absolute h-full bg-yellow'
+            style={{ width: `${humidity}%` }}
+          ></div>
         </div>
         <div className='flex justify-end text-xs'>
           <span>%</span>

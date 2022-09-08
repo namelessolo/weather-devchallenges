@@ -16,7 +16,10 @@ const SearchForm = () => {
         dispatch(fetchWeather(input));
       }}
     >
-      <InputSearch input={input} handleInput={handleInput} />
+      <InputSearch
+        input={input}
+        handleInput={handleInput}
+      />
       <SearchButton />
     </form>
   );

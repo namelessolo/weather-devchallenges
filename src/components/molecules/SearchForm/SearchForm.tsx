@@ -2,7 +2,7 @@ import InputSearch from '../../atoms/InputSearch/InputSearch';
 import SearchButton from '../../atoms/SearchButton/SearchButton';
 import useForm from '../../../hooks/useForm';
 import { useAppDispatch } from '../../../store/hooks';
-import { fetchWeather } from '../../../store/weatherSlice';
+import { fetchWeather } from '../../../slice/weatherSlice';
 
 const SearchForm = () => {
   const { input, handleInput } = useForm();

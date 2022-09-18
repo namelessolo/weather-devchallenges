@@ -1,23 +1,33 @@
-import { CurrentWeather, DailyForecast } from '../types/types';
 import axios from 'axios';
-import { getLocation } from './helpers';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL = process.env.REACT_APP_API_URL;
 
-export const fetchWeatherByCityOrLocation = async (city?: string) => {
-  let forecastWeatherURL: string;
-  let currentWeatherURL: string;
-  if (city) {
-    forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&q=${city}&units=metric`;
-    currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&q=${city}&units=metric`;
-  } else {
-    const [lat, lon] = await getLocation();
-    forecastWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;
-    currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;
-  }
-  const currentWeather = (await (await axios.get(currentWeatherURL)).data) as CurrentWeather;
-  const forecastWeather = (await (await axios.get(forecastWeatherURL)).data) as DailyForecast;
-  const data = await Promise.all([currentWeather, forecastWeather]);
-  return data;
+const getDailyWeatherByLocation = (lat: number, lon: number) => {
+  const currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;
+  return axios.get(currentWeatherURL);
 };
+
+const getForecastWeatherByLocation = (lat: number, lon: number) => {
+  const currentWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&lat=${lat}&lon=${lon}&units=metric`;
+  return axios.get(currentWeatherURL);
+};
+
+const getDailyWeatherByCity = (city: string) => {
+  const currentWeatherURL = `${API_URL}/forecast?appid=${API_KEY}&q=${city}&units=metric`;
+  return axios.get(currentWeatherURL);
+};
+
+const getForecastWeatherByCity = (city: string) => {
+  const currentWeatherURL = `${API_URL}/weather?appid=${API_KEY}&q=${city}&units=metric`;
+  return axios.get(currentWeatherURL);
+};
+
+const api = {
+  getDailyWeatherByLocation,
+  getForecastWeatherByLocation,
+  getDailyWeatherByCity,
+  getForecastWeatherByCity,
+};
+
+export default api;

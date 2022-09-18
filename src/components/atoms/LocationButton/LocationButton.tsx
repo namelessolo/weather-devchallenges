@@ -1,6 +1,6 @@
 import { MdMyLocation } from 'react-icons/md';
 import { useAppDispatch } from '../../../store/hooks';
-import { fetchWeather } from '../../../store/weatherSlice';
+import { fetchWeather } from '../../../slice/weatherSlice';
 
 const LocationButton = () => {
   const dispatch = useAppDispatch();
